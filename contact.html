@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--Meta region-->
         <meta charset="utf-8" />
-        <title>Contact</title>
-        <link rel="stylesheet" href="css/contact.css" type="text/css"/>
+        <meta name="Author" content="Autor: Mateusz Sulima/Michał Semla Wydział Informatyki i Zarządzania PWr" />
+        <meta name="Keywords" content="fitness, klub, sport, gimnastyka" />
+        <meta name="robots" content="noindex,nofollow" />
+        <title>Index</title>
+         <!--Link region-->
+        <link href="css/common.css" rel="stylesheet" />
+        <link href="css/footer.css" rel="stylesheet" />
+        <link href="css/menu.css" rel="stylesheet" />
+        <link href="css/contact.css" rel="stylesheet" />
+        <!--Script region-->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
         <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
+
     </head>
-    <body id="index" class="home">
+    <body>
         <!--
         Here we have all page content downloaded using include.js
         You can add page content using section "content"
         -->
-        <header id="banner" class="body">
-            <h1><a href="#">Kontakt</a></h1>
-            <nav><ul>
-                <li><a href="#">Glowna</a></li>
-                <li><a href="#">O nas</a></li>
-                <li class="active"><a href="#">Kontakt</a></li>
-            </ul></nav>
-        </header>
         <div id="page">
             <div id="pageContent">
                 <div id="content">
-                    <form action="mailto:dummy@CHANGE.TO" method="post">
+                    <form action="mailto:dummy@CHANGE.TO" method="post" id="contactForm">
                         <p>CheckBox <input type="checkbox" name="nazwa" value="wartość" /></p>
                         <p>Radio <input type="radio" name="nazwa" value="wartość" /></p>
                         <p>Imie <input type="text" name="Name" /></p>
@@ -32,7 +34,7 @@
                             <option>Opcja 2</option>
                             <option>Opcja 3</option>
                         </select></p>
-                        <p><textarea rows="4" maxlenght="200">Wpisz co ci lezy na sercu(Maksymalnie 200 znakow).
+                        <p><textarea rows="4" maxlength="200">Wpisz co ci lezy na sercu(Maksymalnie 200 znakow).
                         </textarea></p>
                         <button type="reset">Wyczyść</button>
                         <button type="submit">Wyślij</button>
