@@ -1,9 +1,16 @@
 /*
 This file is for including  parts from template sources
 */
-
-
 $(document).ready(function () {
+    includeDataSources();
+    includeParts();
+});
+
+
+/*
+Here we have page parts include
+*/
+function includeParts() {
 
 
     jQuery.ajaxSetup({ async: false });
@@ -13,5 +20,14 @@ $(document).ready(function () {
     $.get('template/rightNav.html', '', function (data) { $(data).insertAfter("#content");});
     $.get('template/footer.html', '', function (data) { $("#page").append(data); });
 
-});
+}
 
+
+
+/*
+Here we have css i js files include
+*/
+
+function includeDataSources(){
+    $.get('template/head.html', '', function (data) { $('head').append(data); });
+}
