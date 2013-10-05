@@ -13,28 +13,31 @@
         You can add page content using section "content"
         -->
         <header id="banner" class="body">
-            <h1><a href="#">Contact</a></h1>
+            <h1><a href="#">Kontakt</a></h1>
             <nav><ul>
                 <li><a href="#">Glowna</a></li>
                 <li><a href="#">O nas</a></li>
                 <li class="active"><a href="#">Kontakt</a></li>
             </ul></nav>
-
         </header>
         <div id="page">
             <div id="pageContent">
                 <div id="content">
                     <form action="mailto:dummy@CHANGE.TO" method="post">
-                        <h1>"checkbox"</h1>
-                        <input type="checkbox" name="nazwa" value="wartość" />
-                        <input type="text" name="Name" />
-                        <select name="">
+                        <p>CheckBox <input type="checkbox" name="nazwa" value="wartość" /></p>
+                        <p>Radio <input type="radio" name="nazwa" value="wartość" /></p>
+                        <p>Imie <input type="text" name="Name" /></p>
+                        <p>Wybierz: <select name="">
                             <option>Opcja 1</option>
                             <option>Opcja 2</option>
                             <option>Opcja 3</option>
-                        </select>
+                        </select></p>
+
                     </form>
-                </div></div>
+                    <button type="submit">Wyczyść</button>
+                    <button type="reset">Wyślij</button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
