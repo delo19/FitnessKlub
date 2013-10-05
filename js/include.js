@@ -7,20 +7,12 @@ $(document).ready(function () {
 
 
     jQuery.ajaxSetup({ async: false });
-    $.get('template/header.html', '', function (data) { $("#page").append(data); });
-    $.get('template/nav.html', '', function (data) { $("#page").append(data); });
-    $.get('template/leftNav.html', '', function (data) { $("#pageContent").append(data); });
-    $.get('template/rightNav.html', '', function (data) { $("#pageContent").append(data); });
+    $.get('template/header.html', '', function (data) { $(data).insertBefore("#pageContent"); });
+    $.get('template/nav.html', '', function (data) { $(data).insertBefore("#pageContent"); });
+    $.get('template/leftNav.html', '', function (data) {  $(data).insertBefore("#content"); });
+    $.get('template/rightNav.html', '', function (data) { $(data).insertAfter("#content");});
     $.get('template/footer.html', '', function (data) { $("#page").append(data); });
-    reorderElements();
+    //reorderElements();
 
 });
 
-function reorderElements(){
-        //$('#rightNav').insertBefore('#footer');
-        $('#nav').insertBefore('#pageContent');
-
-        $('#leftNav').insertBefore('#content');
-        //$('#nav').insertBefore('#leftNav');
-        $('#header').insertBefore('#nav');
-}
