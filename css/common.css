@@ -98,11 +98,22 @@ body {
     margin: 20px;
     float: left;
     width: 50%;
-    background-color: #ff6a00;
+    background-color: Gray ;
 }
 
-footer {
-    width: 100%;
+
+
+
+
+
+
+
+
+
+#nav a {
+    color: White;
+    background-color: #2e23ad;
     float: left;
-    
+    font-size: 14px;
+    text-align: left;
 }
