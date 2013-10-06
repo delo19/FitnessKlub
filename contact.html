@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8" />
         <!--Script region-->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
         <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
@@ -17,9 +18,10 @@
             <div id="pageContent">
                 <div id="content">
                     <form action="mailto:dummy@CHANGE.TO" method="post" id="contactForm">
-                        <p>CheckBox <input type="checkbox" name="nazwa" value="wartość" /></p>
-                        <p>Radio <input type="radio" name="nazwa" value="wartość" /></p>
-                        <p>Imie <input type="text" name="Name" /></p>
+                        <p>Subskrybcja mailowa <input type="checkbox" name="nazwa" value="subscription" /></p>
+                        <p>Pleć: K<input type="radio" name="sex" value="male" /> M<input type="radio" name="sex" value="female" /></p>
+                        <p>Imie: <input type="text" name="Name" /></p>
+                        <p>Telefon <input type="text" name="Phone" /></p>
                         <p>Wybierz: <select name="">
                             <option>Opcja 1</option>
                             <option>Opcja 2</option>
@@ -29,6 +31,7 @@
                         </textarea></p>
                         <button type="reset">Wyczyść</button>
                         <button type="submit">Wyślij</button>
+                        <p><a href="files/download.me">DownloadUtility</a></p>
                     </form>
                 </div>
             </div>
