@@ -1,9 +1,8 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-image: url("img/bgl.jpg");
     background-position: center top;
-    background-color: white;
+    background-color: #0094ff;
     color: rgb(87, 87, 87);
 }
 
@@ -20,100 +19,9 @@ body {
     height: fit-content;
 }
 
-/*  nav content
-    */
-#nav {
-    display: inline-block;
-    width: 100%;
-}
-
-#nav a {
-}
-
-
-
-
-/* Left nav content
-    */
-#leftNav {
-    float: left;
-    display: inline-block;
-    width: 20%;
-    margin-top: 20px;
-    background-color: #a7a1a1;
-}
-
-#leftNav a {
-    margin: 2px;
-    display: block;
-    background-color: #ccc;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 6px;
-    color: #000;
-    text-decoration: none;
-    border: none;
-}
-
-#leftNav a:hover {
-    border: none;
-    background-color: #777;
-    box-shadow: 0px 0px 1px #777;
-}
-
-
-/* right nav content
-    */
-#rightNav {
-    display: inline-block;
-    width: 20%;
-    margin-top: 20px;
-    background-color: #a7a1a1;
-    float: right;
-}
-
-#rightNav a {
-    margin: 2px;
-    display: block;
-    background-color: #ccc;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 6px;
-    color: #000;
-    text-decoration: none;
-    border: none;
-}
-
-#rightNav a:hover {
-    border: none;
-    background-color: #777;
-    box-shadow: 0px 0px 1px #777;
-}
-
-
-/* Content panel content :)
-    */
-
 #content {
     margin: 20px;
     float: left;
     width: 50%;
-    background-color: Gray ;
-}
-
-
-
-
-
-
-
-
-
-
-#nav a {
-    color: White;
-    background-color: #2e23ad;
-    float: left;
-    font-size: 14px;
-    text-align: left;
+    background-color:  #0094ff ;
 }

@@ -5,11 +5,15 @@
         <!--Script region-->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
         <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
+        <script type="text/javascript" src="js/customScripts.js"></script><!--Email sender-->
         <link href="css/contact.css" rel="stylesheet" />
         <title>Contact</title>
 
+
+
     </head>
     <body>
+
         <!--
         Here we have all page content downloaded using include.js
         You can add page content using section "content"
@@ -17,7 +21,7 @@
         <div id="page">
             <div id="pageContent">
                 <div id="content">
-                    <form action="mailto:dummy@CHANGE.TO" method="post" id="contactForm">
+                    <form>
                         <p>Subskrybcja mailowa <input type="checkbox" name="nazwa" value="subscription" /></p>
                         <p>Pleć: K<input type="radio" name="sex" value="male" /> M<input type="radio" name="sex" value="female" /></p>
                         <p>Imie: <input type="text" name="Name" /></p>
@@ -30,7 +34,7 @@
                         <p><textarea rows="4" maxlength="200">Wpisz co ci lezy na sercu(Maksymalnie 200 znakow).
                         </textarea></p>
                         <button type="reset">Wyczyść</button>
-                        <button type="submit">Wyślij</button>
+                        <button onclick="SendEmail(); return false">Wyślij</button>
                         <p><a href="files/download.me">DownloadUtility</a></p>
                     </form>
                 </div>
