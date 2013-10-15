@@ -16,8 +16,8 @@ function includeParts() {
     jQuery.ajaxSetup({ async: false });
     $.get('template/header.html', '', function (data) { $(data).insertBefore("#pageContent"); });
     $.get('template/nav.html', '', function (data) { $(data).insertBefore("#pageContent"); });
-    $.get('template/leftNav.html', '', function (data) {  $(data).insertBefore("#content"); });
-    $.get('template/rightNav.html', '', function (data) { $(data).insertAfter("#content");});
+    $.get('template/leftNav.html', '', function (data) {  $(data).insertBefore("#pageContent"); });
+    $.get('template/rightNav.html', '', function (data) { $(data).insertAfter("#pageContent");});
     $.get('template/footer.html', '', function (data) { $('body').append(data); });
 
 }

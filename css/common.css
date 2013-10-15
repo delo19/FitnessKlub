@@ -24,4 +24,5 @@ body {
     float: left;
     width: 50%;
     background-color:  #0094ff ;
+        min-height: 500px;
 }

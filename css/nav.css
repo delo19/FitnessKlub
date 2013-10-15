@@ -1,79 +1,72 @@
-
-#header {
-  margin-bottom: 20px; 
+nav  {
+	display: block;
+	width: 100%;
+	overflow: hidden;
 }
-  #header a,#header a img{
-    border: none;
-  }
-  #header #sitedescription{
-    float: right;
-    text-align: right;
-    margin: 7px;
-  }
-    #header #sitedescription h1 {
-      font-weight: normal;
-      position: relative;
-      font-size: 16px;
-      line-height: 0.5em;
-    }  
-  #header #mainmenu{
-    margin: 0px;
-    padding: 0px;
-  }
-    #header .mainmenucorner{
-      margin: 0px;
-      padding: 0px;
-      height: 20px;
-      clear: both;
-      position: relative;
-      top: -15px;
-      left: -10px;
-      width: 20px;
-      margin-bottom: -40px;
-    }
-  
+
+nav ul {
+	margin: 80px 0 20px 0;
+	padding: .7em;
+	float: left;
+	list-style: none;
+	background: #c1c1c1;
+	background: rgba(0,0,0,.2);
+	-moz-border-radius: .5em;
+	-webkit-border-radius: .5em;
+	border-radius: .5em;    
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+	box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset; 
+}
+
+nav li {
+	float:left;
+}
+
+nav a {
+	float:left;
+	padding: .8em 1.5em;
+	text-decoration: none;
+	color: #555;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	font: bold 1.1em/1 'trebuchet MS', Arial, Helvetica;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #fff #ccc #999 #eee;
+	background: #c1c1c1;
+	background: -moz-linear-gradient(#f5f5f5, #c1c1c1);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#c1c1c1));
+	background: -webkit-linear-gradient(#f5f5f5, #c1c1c1);
+	background: -o-linear-gradient(#f5f5f5, #c1c1c1);
+	background: -ms-linear-gradient(#f5f5f5, #c1c1c1);
+	background: linear-gradient(#f5f5f5, #c1c1c1);            
+ }
  
-    #header #mainmenu ul{
-      width: 960px;
-      float: left;
-      margin-bottom: 15px; 
-      margin-top: 20px; 
-      padding: 0px;
-      margin-left: -10px;
-    }
-      #header #mainmenu ul li{
-        list-style: none;
-        background-color: #00ff90;
-        background-position: right bottom;
-        background-repeat: no-repeat;
-        float: left;
-        font-size: 14px;
-      }
-        #header #mainmenu ul li a{
-          padding: 15px 20px;
-          display: block;
-          color: #fff;
-          text-decoration: none;
-          margin-bottom: -13px;
-          padding-bottom: 28px;
-        }
+nav a:hover, nav a:focus {
+	outline: 0;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0,0,0,.2);
+	background: #fac754;
+}
 
-           #header #mainmenu ul li.current{
-               background-color: #f00;
-          }
+nav a:active {
+	-moz-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+}
+ 
+nav li:first-child a {
+	border-left: 0;
+	-moz-border-radius: 4px 0 0 4px;
+	-webkit-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;            
+}
 
-          #header #mainmenu ul li.home a{
-         
-            background-image: url(/images/icons/home_dark.png);
-            background-position: 16px 16px;
-            background-repeat: no-repeat;
-            padding-left: 35px;  
-          }
-          
-          
-          
-        #header #mainmenu ul li:hover{
-          color: #FFF;
-          text-decoration: none;
-          background-color: #a9a4a3;
-        } 
+nav li:last-child a {
+	border-right: 0;
+	-moz-border-radius: 0 4px 4px 0;
+	-webkit-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;            
+}
