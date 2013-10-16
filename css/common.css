@@ -4,11 +4,14 @@ body {
     background-position: center top;
     background-color: #0094ff;
     color: rgb(87, 87, 87);
+    background-repeat: no-repeat;
+    padding: 20px 0px 0px;
+    width: 1000px;
+    margin: 0px auto;
 }
 
 #page {
     background-repeat: no-repeat;
-    background-position: center top;
     padding: 20px 0px 0px;
     width: 1000px;
     margin: 0px auto;
@@ -23,6 +26,6 @@ body {
     margin: 20px;
     float: left;
     width: 50%;
-    background-color:  #0094ff ;
-        min-height: 500px;
+    background-color: #0094ff;
+    min-height: 500px;
 }
