@@ -1,0 +1,42 @@
+body {
+    font-size: 1.5em;
+    color: #f00;
+    background-color: #0ff;
+    background-repeat: repeat-x;
+    background-image: url("/img/bg.jpg");
+    background-attachment: fixed;
+}
+
+h1, h2 {
+    font-size: 50%;
+    border-style: dotted;
+    margin: 0.5em;
+}
+
+.greenMove {
+    color: #00ff21;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#1content, #2content {
+    float: left;
+    background: #000;
+}
+
+header {
+    background: #064a41;
+}
+
+#logoFirmy {
+    background: black;
+    
+    background-image: url("/img/gallery1.jpg");
+    clear: both;
+    width: 300px;   
+    margin-left: 1030px;
+    height: 200px;
+    margin-bottom: 20px;    
+    position: fixed;
+
+}

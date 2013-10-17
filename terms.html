@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
         <!--Script region-->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
         <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
+        <script type="text/javascript" src="js/customScripts.js"></script><!--Email sender-->
+        <link href="css/contact.css" rel="stylesheet" />
+        <title>Reguamin</title>
     </head>
     <body>
                     <!--
-                                                        Here we have all page content downloaded using include.js
-                                                        You can add page content using section "content"
-                                                        -->
+                                                                    Here we have all page content downloaded using include.js
+                                                                    You can add page content using section "content"
+                                                                    -->
         <div id="page">
             <section id="pageContent">
                 <article id="content">
@@ -27,7 +30,7 @@
                         <li><a href="#DEFINICJE">Definicje</a></li>
                     </ol>
                     <article>
-                        <a name="WARUNKI"><h1> WARUNKI UCZESTNICTWA:</h1></a>
+                        <a id="WARUNKI"><h1> WARUNKI UCZESTNICTWA:</h1></a>
                         <p>
     Uczestnikiem klubu FitnessKlub może być osoba pełnoletnia lub niepełnoletnia, za pisemną zgodą prawnego opiekuna. Opiekun prawny składając podpis na formularzu uczestnictwa bierze na siebie całkowitą odpowiedzialność za osobę niepełnoletnią będącą członkiem klubu.
     Karta Uczestnika jest imienna i dotyczy wyłącznie osoby widniejącej w Formularzu Uczestnictwa.
@@ -38,7 +41,7 @@
     W celu kontynuacji korzystania z usług Klubu, Klient wskazuje (w Formularzu Uczestnictwa) nowy termin ważności.
     Wszelkie zmiany w płatnościach za usługi wymagają podpisania nowego Formularza Płatniczego.
                         </p>
-                        <a name="PLATNOSCI"><b>PŁATNOŚCI:</b></a>
+                        <a id="PLATNOSCI"><b>PŁATNOŚCI:</b></a>
                         <br />
                         <br />
                         <br />
@@ -49,13 +52,13 @@
     - następne raty płatne są co miesiąc w 30-o dniowych odstępach czasowych z góry. Kara umowna wynosi 1 zł za każdy dzień zwłoki.
     - brak bieżącej opłaty uniemożliwia korzystanie z usług klubu, jednocześnie Klient zobowiązany jest do jak najszybszego uregulowania zaległych opłat.
                         </p>
-                        <a name="ZAWIESZENIE"><b>ZAWIESZENIE UCZESTNICTWA:</b></a>
+                        <a id="ZAWIESZENIE"><b>ZAWIESZENIE UCZESTNICTWA:</b></a>
                         <p>
     Uczestnik Klubu ma prawo do zawieszeń: Umowa na 3/4 miesiące - jednorazowe zawieszenie, maksymalnie 14 dni. Umowa na 6/8 miesięcy - dwukrotne zawieszenie, maksymalnie na 21 dni. Umowa na 12 miesięcy - trzykrotne zawieszenie, maksymalnie na 28 dni. Karnetów miesięcznych nie obejmuje możliwość zawieszania, ze względu na krótki okres trwania umowy, wyjątek stanowi Karnet Senior - jednorazowe zawieszenie na 7 dni.
     Zawieszenie uczestnictwa należy zgłosić osobiście w klubie lub przez telefon najpóźniej w dniu rozpoczęcia zawieszenia.
     W okresie zawieszenia uczestnictwa opłacanego w ratach miesięcznych, obowiązek płacenia należnej składki miesięcznej nie ustaje, przy czym data końcowa uczestnictwa przedłuża się o okres jego zawieszenia.
                         </p>
-                        <a name="REZYGNACJA"><b>REZYGNACJA Z USŁUG:</b></a>
+                        <a id="REZYGNACJA"><b>REZYGNACJA Z USŁUG:</b></a>
                         <p>
     Uczestnik klubu ma prawo do pisemnej rezygnacji z usług Klubu z przyczyn zdrowotnych, potwierdzonych zaświadczeniem lekarskim.
     Uczestnicy, którzy rezygnują z uczestnictwa z przyczyn zdrowotnych, otrzymują zwrot opłaty za usługi, po odjęciu wykorzystanych dni i wejść w Klubie.
@@ -63,14 +66,14 @@
     Jeżeli uczestnik zrezygnuje z umowy przed jej zakończeniem z przyczyn innych niż zdrowotne jest zobowiązany do pokrycia różnicy w cenach między karnetami miesięcznymi i ich odpowiednikami w wykupionej wcześnij umowie.
     Istnieje możliwość przepisania umowy długoterminowej na inną osobę. Opłata manipulacyjna wynosi 20zł.
                         </p>
-                        <a name="ROZWIAZANIE"><b>ROZWIĄZANIE UMOWY PRZEZ KLUB:</b></a>
+                        <a id="ROZWIAZANIE"><b>ROZWIĄZANIE UMOWY PRZEZ KLUB:</b></a>
                         <p>
     W sytuacji naruszenia warunków Regulaminu Klubu.
     Zalegania za co najmniej 2 okresy płatności (warunki Formularza Uczestnika).
     Niewłaściwego zachowania w Klubie, agresji, wandalizmu, zachowań niezgodnych z zasadami współżycia społecznego.
     Bez podania przyczyny.
                         </p>
-                        <a name="UCZESTNICTWO"><b>UCZESTNICTWO</b></a>
+                        <a id="UCZESTNICTWO"><b>UCZESTNICTWO</b></a>
                         <p>
     Klienci korzystają z wszelkich usług na własną odpowiedzialność i wykupując usługę deklarują, iż nie ma przeciwwskazań lekarskich do korzystania z usług.
     Klienci zobowiązani są do zachowania zgodnego z REGULAMINEM.
@@ -80,7 +83,7 @@
     W momencie zakupu Karty, Karnetu, Uczestnik akceptuje wszystkie postanowienia regulaminu.
     Z Kart i Karnetów mogą kozystać tylko osoby, których dane widnieją na Karcie/Karnecie, za wyjątkiem karnetów wejściowych - z konkretnie określona ilością wejść w miesiącu.
                         </p>
-                        <a name="USLUGI"><b>KORZYSTANIE Z USŁUG</b></a>
+                        <a id="USLUGI"><b>KORZYSTANIE Z USŁUG</b></a>
                         <p>
     Przed przystąpieniem do treningów i zabiegów odnowy biologicznej, Uczestnik powinien zasięgnąć porady lekarskiej.
     Osoby o niestabilnym stanie zdrowia powinny korzystać z usług klubu za zgodą lekarza. Za skutki zdrowotne przebywania tych osób w strefie SPA klub nie ponosi odpowiedzialności.
@@ -98,14 +101,14 @@
     Klub zastrzega sobie prawo do chwilowego zamknięcia klubu bądź jego części (Sali, salonów odnowy biologicznej), w związku ze sprzątaniem, konserwacją, naprawami sprzętu i urządzeń.
     Na terenie Klubu obowiązuje całkowity zakaz palenia tytoniu, spożywania napojów alkoholowych i farmaceutyków, wnoszenia opakowań szklanych, ostrych narzędzi oraz innych niebezpiecznych przedmiotów, wstępu osobom pod wpływem alkoholu lub, których stan wskazuje na spożycie alkoholu oraz innych środków odurzających.
                         </p>
-                        <a name="PRZEDMIOTY"><b>RZECZY OSOBISTE, CENNE PRZEDMIOTY</b></a>
+                        <a id="PRZEDMIOTY"><b>RZECZY OSOBISTE, CENNE PRZEDMIOTY</b></a>
                         <p>
     Wszystkie rzeczy osobiste należy przechowywać w szafkach.
     Cenne rzeczy osobiste, dokumenty powinny zostać zdeponowane w Recepcji Klubu.
     Klub zastrzega sobie prawo nie przyjęcia w depozyt oferowanego przedmiotu.
     Klub nie jest odpowiedzialny za bezpieczeństwo rzeczy członków i ich gości nie zdeponowanych w Recepcji, a przedmioty nie zabezpieczone są pozostawione na ryzyko właściciela. Klub nie odpowiada za ich zagubienie lub zniszczenie.
                         </p>
-                        <a name="UWAGI"><b>UWAGI OGÓLNE</b></a>
+                        <a id="UWAGI"><b>UWAGI OGÓLNE</b></a>
                         <p>
     Bez zgody kierownictwa KlubFitness zabronione jest wywieszanie plakatów, rozdawanie, bądź pozostawianie ulotek na terenie Klubu.
     W przypadku pierwszego zakupu Karty lub Karnetu miesięcznego pobierana jest jednorazowa opłata w wysokości 5 zł za wydanie plastikowej karty.
@@ -120,7 +123,7 @@
     Wszelkie zawiadomienia będą wysyłane elektronicznie na adres Uczestnika podany w Formularzu zgłoszenia. Uczestnik wyraża zgodę na otrzymywanie informacji z FitnessKlub w formie e-mail, sms, mms. i innych nośników informacji.
     Uczestnik zobowiązany jest do zgłaszania w Recepcji zmian danych kontaktowych.
                         </p>
-                        <a name="DEFINICJE"><b>DEFINICJE:</b></a>
+                        <a id="DEFINICJE"><b>DEFINICJE:</b></a>
 Klub - Klub FitnessKlub Fitness, Centrum Śródmieście pl. Maksa Borna 1a 50-204 Wrocław oraz Klub FitnessKlub Wellness Centrum Krzyki ul. Pretficza 37 50-926 Wrocław
 Klubowicz - osoba posiadająca Kartę, Karnet lub wykupująca jednorazową usługę jest Klubowiczem przez cały okres trwania umowy wynikającej z zakupu wymienionych świadczeń.
                     </article>

@@ -39,7 +39,7 @@
                                 <option value="Listopad">
                                 <option value="Grudzień">
                             </datalist>
-                        <p>Email: <input type="email" name="Email" required /></p>
+                        <p>Email: <input type="email" name="Email" pattern="^([0-9]{9})|(([0-9]{3}-){2}[0-9]{3})$" required /></p>
                         <p>Telefon: <input type="tel" name="Phone" pattern="^([0-9]{9})|(([0-9]{3}-){2}[0-9]{3})$"/></p>
                         <button type="reset">Wyczyść</button>
                         <button onclick="SendEmail(); return false">Wyślij</button>

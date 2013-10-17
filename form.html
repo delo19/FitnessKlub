@@ -7,7 +7,7 @@
         <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
         <script type="text/javascript" src="js/customScripts.js"></script><!--Email sender-->
         <link href="css/form.css" rel="stylesheet" />
-        <title>Coś</title>
+        <title>Form</title>
 
 
 
@@ -22,11 +22,12 @@
             <section id="pageContent">
                 <article id="content">
                     <form autocomplete="on">
-                        <p><input type="color" name="Color"  placeholder="" autofocus/></p>
+                        <p><input type="color" name="Color"  placeholder="" autofocus="true"/></p>
                         <p><input type="month" name="Month" placeholder=""  /></p>
                         <p><input type="range" name="Range" placeholder="AFWQAS"  /></p>
                         <p><input type="search" name="Search" placeholder="Szukajka"  /></p>
                         <p><input type="url" name="Url" placeholder="Tu umieść url"  /></p>
+                        <p><input type="date" name="Date" placeholder="Podaj date"  /></p>
                         <button type="reset">Wyczyść</button>
                         <button onclick="SendEmail(); return false">Wyślij</button>
                     </form>
