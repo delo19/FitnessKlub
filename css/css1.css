@@ -68,3 +68,127 @@ p.niebieska {
     border-style:solid;
     border-color:blue;    
 }
+
+/* ------------------------MENU------------------------ */
+
+#testMenu, #testMenu ul, #testMenu ol {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+
+#testMenu {
+    background-color:#FFF;
+    font-size:18px;
+    height:2em;
+    line-height:2em;
+    text-align:center;
+}
+
+#testMenu a {
+    display:block;
+    text-decoration:none;
+    color:#000;
+    padding:0 5px;
+}
+
+#testMenu > li {
+    float:left;
+    width:150px;
+    margin-left:1px;
+    background-color:#00a5fd;
+    height:2em;
+}
+
+#testMenu > li:first-child {
+    margin-left:0;
+}
+
+#testMenu > li:hover {
+    background-color:#EEE;
+}
+
+#testMenu > li:hover > a {
+    color:#09C;
+}
+
+#testMenu > li:hover > ul {
+    display:block;
+}
+
+/* ------------------------MENU-POZIOM-1----------------------- */
+
+#testMenu > li > ul {
+    display:none;
+}
+
+#testMenu > li > ul > li {
+    position:relative;
+    background-color:#EEE;
+}
+
+#testMenu > li > ul > li > a {
+    border-top:1px solid #FFF;
+}
+
+#testMenu > li > ul > li:hover {
+    background-color:#DDD;
+}
+
+#testMenu > li > ul > li:hover > a {
+    color:#09C;
+}
+
+/* ------------------------MENU-POZIOM-2----------------------- */
+
+#testMenu > li > ul > li > ol {
+    display:none;
+    width:150%;
+    position:absolute;
+    left:100%;
+    margin-top:-2em;
+}
+
+#testMenu > li > ul > li:hover > ol {
+    display:block;
+}
+
+#testMenu > li > ul > li > ol > li {
+    background-color:#CCC;
+}
+
+#testMenu > li > ul > li > ol > li > a {
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+
+#testMenu > li > ul > li > ol > li > a:hover {
+    color:#09C;
+}
+
+/* ------------------------MENU-POZIOM-3----------------------- */
+
+#testMenu > li > ul > li > ol > li > ol {
+    display:none;
+    width:150%;
+    position:absolute;
+    left:100%;
+    margin-top:-2em;
+}
+
+#testMenu > li > ul > li > ol > li:hover > ol {
+    display:block;
+}
+
+#testMenu > li > ul > li > ol > li > ol > li {
+    background-color:#CCC;
+}
+
+#testMenu > li > ul > li > ol > li > ol > li > a {
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+
+#testMenu > li > ul > li > ol > li > ol > li > a:hover {
+    color:#09C;
+}
