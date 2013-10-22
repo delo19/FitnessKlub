@@ -40,3 +40,31 @@ header {
     position: fixed;
 
 }
+
+p.cienka {
+    border-width:1px;
+    border-style:solid;
+}
+
+p.pogrubiona {
+    border-width:3px;
+    border-style:solid;
+}
+
+p.podwojna {
+    border-style:double;
+}
+
+p.kropkowana {
+    border-style:dotted;
+}
+
+p.czerwona {
+    border-style:solid;
+    border-color:red;    
+}
+
+p.niebieska {
+    border-style:solid;
+    border-color:blue;    
+}
