@@ -1,0 +1,22 @@
+@media print{
+
+	footer {
+		display: none;
+	}
+
+	header {
+		display: none;
+	}
+
+	nav {
+		display: none;
+	}
+
+	aside#leftNav {
+		display: none;
+	}
+
+	aside#rightNav {
+		display: none;
+	}
+}
