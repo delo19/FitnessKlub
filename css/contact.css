@@ -8,3 +8,6 @@
 	background-color:yellow;
 	box-shadow: 10px 10px 5px #888888;
 }
+
+tbody tr:nth-child(odd) {background: #c9d9c9;} 
+tbody tr:nth-child(even) {background: #c0c0c0;}

@@ -1,6 +1,8 @@
 body {
     font-size: 1.5em;
     color: #f00;
+    /* css2: 4*/
+    /*background: linear-gradient(to left, cyan, blue);*/
     background-color: #0ff;
     background-repeat: repeat-x;
     background-image: url("/img/bg.jpg");
@@ -67,6 +69,10 @@ p.czerwona {
 p.niebieska {
     border-style:solid;
     border-color:blue;    
+}
+
+a {
+    background-color: red;    
 }
 
 /* ------------------------MENU------------------------ */
