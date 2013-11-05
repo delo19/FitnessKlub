@@ -37,6 +37,38 @@
     border-image: url("/img/border.png") 30% repeat;
 }
 
+/* Punkt 8*/
+
+#transitionTest {
+    width: 30px;
+    height: 30px;
+    background: red;
+    transition: width 2s;
+}
+
+#transitionTest2 {
+    width: 30px;
+    height: 30px;
+    background: green;
+    transition: width 2s;
+}
+
+#transformTest {
+    width: 30px;
+    height: 30px;
+    background: blue;
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+}
+
+#transformTest2 {
+    width: 30px;
+    height: 30px;
+    background: black;
+    transform: translate(20px,20px);
+    -webkit-transform: translate(20px,20px);
+}
+
 /*Punkt 12*/
 
 
