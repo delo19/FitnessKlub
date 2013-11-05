@@ -26,6 +26,20 @@ h1, h2 {
     background: #000;
 }
 
+/* 6 */
+
+#borderTest {
+    padding:25px;
+    background-image: url("/img/gallery1.jpg");
+    background-origin: border-box;
+}
+
+#contentTest {
+    padding:25px;
+    background-image: url("/img/gallery1.jpg");
+    background-origin: content-box;
+}
+
 header {
     background: #064a41;
 }
