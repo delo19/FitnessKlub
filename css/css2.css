@@ -14,6 +14,29 @@
     background-color: hsla(60,92%,86%,0.6);
 }
 
+/* Punkt 7 */
+
+#borderImageTest {
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    border-image: url("/img/border.png") 30 repeat;
+}
+
+#borderImageTest1 {
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    border-image: url("/img/border.png") 30%;
+}
+
+#borderImageTest2 {
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    border-image: url("/img/border.png") 30% repeat;
+}
+
 /*Punkt 12*/
 
 
@@ -61,7 +84,7 @@
     width: 150px;
     height: 150px;
     text-align: center; 
-    display: -ms-flexbox;
+    display: -ms-flexbox; 
 }
 
 
