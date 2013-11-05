@@ -1,14 +1,13 @@
+
 body {
-    font-size: 1.5em;
-    color: #f00;
     /* css2: 4*/
-    /*background: linear-gradient(to left, cyan, blue);*/
+    background: linear-gradient(to left, cyan, blue);
     background-color: #0ff;
     background-repeat: repeat-x;
-    background-image: url("/img/bg.jpg");
+    /*background-image: url("/img/bg.jpg");*/
     background-attachment: fixed;
 }
-
+/*
 h1, h2 {
     font-size: 50%;
     border-style: dotted;
@@ -20,7 +19,7 @@ h1, h2 {
     margin-left: 25px;
     margin-top: 15px;
 }
-
+*/
 #1content, #2content {
     float: left;
     background: #000;
