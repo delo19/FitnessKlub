@@ -38,9 +38,23 @@ header {
     width: 300px;   
     margin-left: 1030px;
     height: 200px;
-    margin-bottom: 20px;    
+    margin-bottom: 0px;    
     position: fixed;
 
+}
+
+#akapit1{
+    width: 20%;
+}
+    
+#akapit2{
+    width: 80%;
+}
+
+#akapit3{
+    overflow-y: scroll; 
+    height: 100px;
+    width: 200px; 
 }
 
 p.cienka {
@@ -71,7 +85,7 @@ p.niebieska {
     border-color:blue;    
 }
 
-a {
+a#testA{
     background-color: red;    
 }
 
