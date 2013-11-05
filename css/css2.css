@@ -69,6 +69,20 @@
     -webkit-transform: translate(20px,20px);
 }
 
+#transformTest3 {
+    width: 30px;
+    height: 30px;
+    background: rgba(128,128,128,0.5);
+    transform: translate(20px,10px);
+    -webkit-transform: translate(20px,10px);
+}
+
+#transformTest3a {
+    width: 30px;
+    height: 30px;
+    background: rgba(238,128,38,0.5);
+}
+
 /*Punkt 12*/
 
 
