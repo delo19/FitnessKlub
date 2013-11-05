@@ -1,11 +1,12 @@
 
 body {
     /* css2: 4*/
-    background: linear-gradient(to left, cyan, blue);
-    background-color: #0ff;
+    /*background: linear-gradient(to left, cyan, blue);*/
+    background-image: -webkit-radial-gradient(center center, ellipse closest-corner, #ff0000, #00ff00, #0000ff );
+    /*background-color: #0ff;
     background-repeat: repeat-x;
-    /*background-image: url("/img/bg.jpg");*/
-    background-attachment: fixed;
+    /*background-image: url("/img/bg.jpg");
+    background-attachment: fixed;*/
 }
 /*
 h1, h2 {
@@ -25,6 +26,20 @@ h1, h2 {
     background: #000;
 }
 
+/* 6 */
+
+#borderTest {
+    padding:25px;
+    background-image: url("/img/gallery1.jpg");
+    background-origin: border-box;
+}
+
+#contentTest {
+    padding:25px;
+    background-image: url("/img/gallery1.jpg");
+    background-origin: content-box;
+}
+
 header {
     background: #064a41;
 }
@@ -37,9 +52,23 @@ header {
     width: 300px;   
     margin-left: 1030px;
     height: 200px;
-    margin-bottom: 20px;    
+    margin-bottom: 0px;    
     position: fixed;
 
+}
+
+#akapit1{
+    width: 20%;
+}
+    
+#akapit2{
+    width: 80%;
+}
+
+#akapit3{
+    overflow-y: scroll; 
+    height: 100px;
+    width: 200px; 
 }
 
 p.cienka {
@@ -70,7 +99,7 @@ p.niebieska {
     border-color:blue;    
 }
 
-a {
+a#testA{
     background-color: red;    
 }
 
