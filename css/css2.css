@@ -83,6 +83,37 @@
     background: rgba(238,128,38,0.5);
 }
 
+/* Punkt 11 */
+
+.box {
+  width: 350px;
+  height: 95px;
+  border: 1px solid #555;
+  font: 24px Arial;
+
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+
+  display: box;
+  box-orient: horizontal;
+}
+
+.box > div {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+
+  -webkit-transition: width 0.7s ease-out;
+  transition: width 0.7s ease-out;
+}
+
+.box > div:nth-child(1){ background : #F99; }
+.box > div:nth-child(2){ background : #9F9; }
+.box > div:nth-child(3){ background : #99F; }
+
+.box > div:hover { 
+  width: 200px;
+}​
+
 /*Punkt 12*/
 
 
