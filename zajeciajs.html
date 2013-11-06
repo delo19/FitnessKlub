@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!--Script region-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
+        <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
+        <script type="text/javascript" src="js/customScripts.js"></script><!--Email sender-->
+        <script type="text/javascript" src="js/zajecia1.js"></script><!--Email sender-->
+        <link href="css/contact.css" rel="stylesheet" />
+
+        <title>Cennik</title>
+    </head>
+    <body>
+                    <!--
+                                                        Here we have all page content downloaded using include.js
+                                                        You can add page content using section "content"        
+                                                  -->
+        <div id="page">
+
+            <section id="pageContent">
+                <article id="zawartosc">
+                    <div id="text"></div>
+                    <button id="chcePodac">Chce podac nazwe</button>
+                    <button onclick="nieKlikac()">Nie klikać!</button>
+
+                    <p>
+                        <script>
+                            document.writeln("to zostało dopisane przez javascript");
+                            
+                        </script>
+                    </p>
+                </article>
+
+            </section>
+        </div>
+
+    </body>
+</html>
