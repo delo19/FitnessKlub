@@ -5,12 +5,9 @@
         <!--Script region-->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
         <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
-        <script type="text/javascript" src="js/customScripts.js"></script><!--Email sender-->
+        <script type="text/javascript" src="js/dom.js"></script>
         <link href="css/form.css" rel="stylesheet" />
         <title>Coś</title>
-
-
-
     </head>
     <body>
 
@@ -21,16 +18,38 @@
         <div id="page">
             <section id="pageContent">
                 <article id="content">
-                    <form autocomplete="on">
-                        <p><input type="color" name="Color" autofocus/></p>
-                        <p><input type="month" name="Month" /></p>
-                        <p><input type="range" name="Range" /></p>
-                        <p><input type="search" name="Search" placeholder="Szukajka"  /></p>
-                        <p><input type="url" name="Url" placeholder="Tu umieść url"  /></p>
-                        <p><input type="date" name="Date" placeholder="Podaj date"  /></p>
-                        <button type="reset">Wyczyść</button>
-                        <button onclick="SendEmail(); return false">Wyślij</button>
-                    </form>
+                    <p> Wybierz kolor tła</p>               
+                        <select id=colorList onchange="updated1(this)" >
+                            <option> Red    
+                            <option> Blue
+                            <option> Green
+                            <option> Black
+                        </select>
+                    <p>Wybierz kolor czcionki</p>
+                        <select id=colorFontList onchange="updated2(this)" >
+                            <option> Red    
+                            <option> Blue
+                            <option> Green
+                            <option> Black
+                        </select>
+                    <p>Wybierz rodzaj czcionki</p>
+                        <select id=fontList onchange="updated3(this)" >
+                            <option> sans-serif 
+                            <option> serif
+                            <option> courier
+                            <option> verdana                 
+                        </select>
+
+                    <ul id="myList">
+                        <li>Test</li>
+                        <li>Test</li>
+                    </ul>
+                    
+                    <button onclick="update4()">Dodaj element</button>
+
+                    <p id="text">NieZmieniony</p>
+                    <button onclick="update5()">Zamien</button>
+                    <button onclick="update6()">Usun</button>
                 </article>
             </section>
         </div>
