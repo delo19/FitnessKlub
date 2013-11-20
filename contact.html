@@ -6,6 +6,7 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
         <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
         <script type="text/javascript" src="js/customScripts.js"></script><!--Email sender-->
+        <script type="text/javascript" src="js/dom.js"></script><!--Email sender-->
         <link href="css/contact.css" rel="stylesheet" />
         <title>Contact</title>
 
@@ -21,7 +22,7 @@
         <div id="page">
             <section id="pageContent">
                 <article id="content">
-                    <form>
+                    <form onsubmit="submitAlert()" onreset="resetAlert()">
                         <p>Subskrybcja mailowa <input type="checkbox" name="nazwa" value="subscription" /></p>
                         <p>Pleć: K<input type="radio" name="sex" value="male" /> M<input type="radio" name="sex" value="female" /></p>
                         <p>Imie: <input type="text" name="Name" /></p>
@@ -31,11 +32,13 @@
                             <option>Opcja 2</option>
                             <option>Opcja 3</option>
                         </select></p>
-                        <p><textarea rows="4" maxlength="200">Wpisz co ci lezy na sercu(Maksymalnie 200 znakow).
+                        <p><textarea rows="4" maxlength="200" onfocus="getFocus()" onblur="getBlur()">Wpisz co ci lezy na sercu(Maksymalnie 200 znakow).
                         </textarea></p>
                         <button type="reset">Wyczyść</button>
-                        <button onclick="SendEmail(); return false">Wyślij</button>
-                        <p><a href="files/download.me">DownloadUtility</a></p>
+                        <button type="submit" >Wyślij</button>
+                        <p><a id="download" href="files/download.me">DownloadUtility</a></p>
+                        <input type="button" onclick="getFocus()" value="Uzycie focus">
+                        <input type="button" onclick="getBlur()" value="Uzycie blur">
                     </form>
                 </article>
             </section>
