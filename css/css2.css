@@ -83,37 +83,6 @@
     background: rgba(238,128,38,0.5);
 }
 
-/* Punkt 11 */
-
-.box {
-  width: 350px;
-  height: 95px;
-  border: 1px solid #555;
-  font: 24px Arial;
-
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-
-  display: box;
-  box-orient: horizontal;
-}
-
-.box > div {
-  -webkit-box-flex: 1;
-  box-flex: 1;
-
-  -webkit-transition: width 0.7s ease-out;
-  transition: width 0.7s ease-out;
-}
-
-.box > div:nth-child(1){ background : #F99; }
-.box > div:nth-child(2){ background : #9F9; }
-.box > div:nth-child(3){ background : #99F; }
-
-.box > div:hover { 
-  width: 200px;
-}​
-
 /*Punkt 12*/
 
 
@@ -139,7 +108,7 @@
 
 /*Punkt 13*/
 
-@media screen and (min-width: 980px) {
+@media screen and (max-width: 980px) {
     /* column count */
     .kolumny {
         column-count: 5;
@@ -167,7 +136,7 @@
 
 
 
-
+/*
 @font-face {
   font-family: 'Bigelow Rules';
   font-style: normal;
@@ -186,7 +155,7 @@ body{
 }
 
 
-
+*/
 
 /*Animacja */
 
@@ -194,7 +163,7 @@ body{
 body
 {
 animation:myfirst 15s;
--webkit-animation:myfirst 15s; /* Safari and Chrome */
+-webkit-animation:myfirst 15s; /* Safari oraz Chrome */
 }
 
 @keyframes myfirst
@@ -205,7 +174,7 @@ animation:myfirst 15s;
 100% {background:green;}
 }
 
-@-webkit-keyframes myfirst /* Safari and Chrome */
+@-webkit-keyframes myfirst /* Safari oraz Chrome */
 {
 0%   {background:red;}
 25%  {background:yellow;}

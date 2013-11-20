@@ -2,7 +2,7 @@
 body {
     /* css2: 4*/
     /*background: linear-gradient(to left, cyan, blue);*/
-    background-image: -webkit-radial-gradient(center center, ellipse closest-corner, #ff0000, #00ff00, #0000ff );
+   /* background-image: -webkit-radial-gradient(center center, ellipse closest-corner, #ff0000, #00ff00, #0000ff );*/
     /*background-color: #0ff;
     background-repeat: repeat-x;
     /*background-image: url("/img/bg.jpg");
