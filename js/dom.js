@@ -1,31 +1,31 @@
-function updated1(element)
+function setBackgroundColor(element)
 {
     var idx=element.selectedIndex;
     var val=element.options[idx].value;
 	
     document.body.setAttribute( "style",   
-         "background-color: " + val );
+        "background-color: " + val );
  }
 
-function updated2(element)
+function setFontColor(element)
 {
     var idx=element.selectedIndex;
     var val=element.options[idx].value;
 	
     document.body.setAttribute( "style",   
-         "color: " + val );
+        "color: " + val );
  }
 
-function updated3(element)
+function setFont(element)
 {
     var idx=element.selectedIndex;
     var val=element.options[idx].value;
 	
     document.body.setAttribute( "style",   
-         "font-family: " + val );
+        "font-family: " + val );
  }
 
-function update4(element) 
+function addTextNode(element) 
 {
 	var newItem=document.createElement("LI")
 	var textnode=document.createTextNode("Test")
@@ -34,28 +34,33 @@ function update4(element)
 	list.insertBefore(newItem,list.childNodes[0]);
 }
 
-function update5()
+function changeText()
 {
 	var textnode=document.createTextNode("Zmieniony(replaceChild)");		
 	var item=document.getElementById("text");	
 	item.replaceChild(textnode,item.childNodes[0]);	
 }
 
-function update6()
+function changeText2()
+{
+	document.all.namedItem("text").innerHTML = "Zmieniony przez metode namedItem"; 
+}
+
+
+function remove()
 {	
 	var item=document.getElementsByTagName('p')[0];	
 	item.parentNode.removeChild(item);
 }
 
+/**/
 var color   = 'red'; 
 var columns = 25;    
 var rows    = 25;   
 var mouse   = 0;     
  
-/**/
 
-window.onload = function ()
-{
+window.onload = function (){
     table_create(); 
     table_events();
     document.body.ondragstart = function(e){return false}   
@@ -64,8 +69,7 @@ window.onload = function ()
 }
  
 
-function mousedown(e)
-{ 
+function mousedown(e){ 
     var evt = e || window.event;
 	 if ( e.ctrlKey ) {
 		color = 'blue';
@@ -77,6 +81,7 @@ function mousedown(e)
 		if ( e.altKey ) {
 		color = 'white';
 		}
+
   
     if (evt.preventDefault) e.preventDefault();   
     if (evt.which) mouse = evt.which;
@@ -85,8 +90,7 @@ function mousedown(e)
 }
  
 
-function table_create()
-{
+function table_create(){
     var tbl = ''; 
    
     for (var i=0; i<rows; i++){
@@ -100,8 +104,8 @@ function table_create()
 }
  
 
-function table_events()
-{
+function table_events(){
+  
     var td = document.getElementById('drawing_table').getElementsByTagName('td');
    
     for (var i=0; i<td.length; i++){
@@ -111,10 +115,90 @@ function table_events()
     }
 }
 
-function set_color(obj)
-{
+function set_color(obj){
     color = obj.style.backgroundColor;
     var tbl = document.getElementById('drawing_table').firstChild;
     tbl.style.borderColor = color;
 }
+
+/**/
+
+
+var img;
+var dragData=null;
+
+function windowOnload() 
+{
+    img=document.getElementById("image")
+    if(window.addEventListener) 
+    {
+        img.addEventListener('mousedown',startDrag,false);
+        document.body.addEventListener('mousemove',drag,false);
+        document.body.addEventListener('mouseup',stopDrag,false);
+    }
+    else if(window.attachEvent) 
+    {
+        img.attachEvent('onmousedown',startDrag);
+        document.body.attachEvent('onmousemove',drag);
+        document.body.attachEvent('onmouseup',stopDrag);
+	}
+}
+
+function startDrag(ev) 
+{
+    if(!dragData) 
+    {
+        ev=ev||event;
+        dragData=
+        {
+    	    x: ev.clientX-img.offsetLeft,
+        	y: ev.clientY-img.offsetTop
+        };
+    };
+}
+
+function drag(ev) 
+{
+    if(dragData) 
+    {
+        ev=ev||event;
+        img.style.left=ev.clientX-dragData.x+"px";
+        img.style.top=ev.clientY-dragData.y+"px";
+	}
+}
+
+function stopDrag(ev) 
+{
+	if(dragData) 
+	{
+  		ev=ev||event;
+  		img.style.left=ev.clientX-dragData.x+"px";
+  		img.style.top=ev.clientY-dragData.y+"px";
+  		dragData=null;
+	}
+}
+
+function getFocus()
+{
+	document.getElementById('download').focus()
+}
+
+function getBlur()
+{
+	document.getElementById('download').blur()
+}
+
+function submitAlert()
+{
+	window.alert("Wyslano");
+}
+
+function resetAlert()
+{
+	window.alert("Wyczyszczono");
+}
+
+/**/
+
+
 
