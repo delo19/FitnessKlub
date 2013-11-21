@@ -1,13 +1,4 @@
-#contactForm{
-    margin: 10px;
-}
-
-#page{
-	width:300px;
-	height:100px;
-	background-color:yellow;
-	box-shadow: 10px 10px 5px #888888;
-}
+ a:active {color:red}
 
 tbody tr:nth-child(odd) {background: #c9d9c9;} 
 tbody tr:nth-child(even) {background: #c0c0c0;}

@@ -9,7 +9,7 @@
         <link href="css/form.css" rel="stylesheet" />
         <title>Coś</title>
     </head>
-    <body>
+    <body onload='windowOnload();'>
 
         <!--
         Here we have all page content downloaded using include.js
@@ -19,21 +19,21 @@
             <section id="pageContent">
                 <article id="content">
                     <p> Wybierz kolor tła</p>               
-                        <select id=colorList onchange="updated1(this)" >
+                        <select id=colorList onchange="setBackgroundColor(this)" >
                             <option> Red    
                             <option> Blue
                             <option> Green
                             <option> Black
                         </select>
                     <p>Wybierz kolor czcionki</p>
-                        <select id=colorFontList onchange="updated2(this)" >
+                        <select id=colorFontList onchange="setFontColor(this)" >
                             <option> Red    
                             <option> Blue
                             <option> Green
                             <option> Black
                         </select>
                     <p>Wybierz rodzaj czcionki</p>
-                        <select id=fontList onchange="updated3(this)" >
+                        <select id=fontList onchange="setFont(this)" >
                             <option> sans-serif 
                             <option> serif
                             <option> courier
@@ -44,12 +44,13 @@
                         <li>Test</li>
                         <li>Test</li>
                     </ul>
-                    
-                    <button onclick="update4()">Dodaj element</button>
+
+                    <button onclick="addTextNode()">Dodaj element</button>
 
                     <p id="text">NieZmieniony</p>
-                    <button onclick="update5()">Zamien</button>
-                    <button onclick="update6()">Usun</button>
+                    <button onclick="changeText()">Zamien</button>
+                    <button onclick="changeText2()">Zamien</button>
+                    <button onclick="remove()">Usun</button>
                 </article>
             </section>
         </div>
