@@ -46,12 +46,31 @@
                         <p>Telefon: <input type="tel" name="Phone" pattern="^([0-9]{9})|(([0-9]{3}-){2}[0-9]{3})$"/></p>
                         <button type="reset">Wyczyść</button>
                         <button onclick="SendEmail(); return false">Wyślij</button>
+                        <button onclick="document.write('<?php monthChanger() ?>');">Petla</button>
+                        <button onclick="document.write('<?php monthChangerForEach() ?>');">foreach</button>
                     </form>
                     <?php
-
-                        $jakisString="dtring";
-                        echo $jakisString;
-
+                        function monthChangerForEach() {
+                            print( "<p> Uzycie petli foreach.</p>");
+                            $monthMap = array(
+                                "Styczeń" => "pierwszym", "Luty" => "drugim", "Marzec" => "trzecim", "Kwiecień" => "czwartym",
+                                "Maj" => "piątym", "Czerwiec" => "szóstym", "Lipiec" => "siódmym", "Sierpień" => "ósmym",
+                                "Wrzesień" => "dziewiątym", "Październik" => "dziesiątym", "Listopad" => "jedenastym", "Grudzień" => "dwunastym" );
+                            foreach ($monthMap as $month => $value) {
+                                print( "<p> $month jest $value miesiacem.</p>");
+                            }
+                        }
+                        function monthChanger() {
+                            print( "<p> Uzycie zwyklej petli for.</p>");
+                            $monthArray = array(
+                                "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", 
+                                "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień" );
+                            $numerals = array( 
+                                "pierwszym", "drugim", "trzecim", "czwartym", "piątym", "szóstym", "siódmym", "ósmym", "dziewiątym", "dziesiątym", "jedenastym", "dwunastym" );
+                            for ( $i = 0, $size = count( $numerals ); $i < $size; $i++ ) {
+                                print( "<p> $monthArray[$i] jest $numerals[$i] miesiacem.</p>");
+                            }
+                        }
                     ?>
                 </article>
             </section>
