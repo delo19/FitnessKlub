@@ -14,12 +14,13 @@
             <section id="pageContent">
                 <article id="content">
                     <?php 
+                        
                         session_start();
-                        if( !isset($_SESSION['ta']) ){
+                        if( !isset($_SESSION['ta']) ) {
                             $_SESSION['ta'] = array();
                         }
 
-                        if( $_SERVER['REQUEST_METHOD'] == 'POST'  && strlen($_POST['ta']) > 0 ){
+                        if( $_SERVER['REQUEST_METHOD'] == 'POST'  && strlen($_POST['ta']) > 0 ) {
                             $_SESSION['ta'] = checkWords();
                         }
                     ?>
@@ -34,7 +35,7 @@
                             <option>Opcja 3</option>
                         </select></p>
                         <p>
-                            <textarea name="ta" rows="4" maxlength="200" placeholder="Wpisz co ci lezy na sercu." ></textarea></p>
+                            <textarea name="ta" rows="4" maxlength="200" placeholder="Wpisz co ci lezy na sercu."><?php showMessage(); ?></textarea></p>
                         <button type="reset">Wyczyść</button>
                         <button type="submit" >Wyślij</button>
                     </form>
@@ -46,16 +47,33 @@
                     </ul>
                     <?php
                         function checkWords() {
+                            $replaceWord = ["/invalid/" => "valid",];
                             $words = explode(' ', $_POST['ta']);
                             $i = 0;
+                            $message = "";
+                            $isIllegalMessage = false;
                             foreach ($words as $word) {
-                                if( preg_match('/invalid/', $word) ) {
-                                    preg_replace('/invalid/', 'valid', $word);
-                                    $illegalWords[$i] = $word;
-                                    $i++;
+                                foreach ($replaceWord as $invalidWord => $validWord) {
+                                    if( preg_match('/invalid/', $word) ) {
+                                        $illegalWords[$i] = $word;
+                                        $i++;
+                                        $isIllegalMessage = true;
+                                        $message = $message . " " . $validWord;
+                                    } else {
+                                        $message = $message . " " . $word;
+                                    }
                                 }
                             }
+                            if( $isIllegalMessage ) {
+                                $_COOKIE['textarea'] = substr($message, 1); 
+                            } else {
+                                $_COOKIE['textarea'] = "";
+                            }
                             return $illegalWords;
+                        }
+
+                        function showMessage() {
+                            echo $_COOKIE['textarea'];
                         }
                     ?>
                 </article>

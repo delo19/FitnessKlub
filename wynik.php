@@ -15,7 +15,7 @@
             <section id="pageContent">
                 <article id="content">
                     <?php
-
+                        
                         define('ILLEGAL_NAME', 'Podano niedozwolone imie');
                         define('PASSWORD_NOT_MATCH', '<font color="red">Hasla nie zgadzaja sie</font>');
                         
@@ -30,6 +30,8 @@
                                     echo printVar("Haslo to: $pass");
                             }
                             echo printVar("Zmienna 'Haslo' jest typu: ".gettype($pass));
+                            $pass = (string)$pass;
+                            echo printVar("Teraz zmienna 'Haslo' jest typu: ".gettype($pass));
                         }
 
                         function getRandomPass() {
@@ -62,9 +64,6 @@
                                 echo printVar("$phone");
                         }
 
-                        echo $_SERVER['HTTP_USER_AGENT'];
-                        echo '<br />';
-                        echo $_SERVER[REMOTE_ADDR];
                     ?>
                 </article>
             </section>
