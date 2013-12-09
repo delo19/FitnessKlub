@@ -54,7 +54,7 @@
                             $isIllegalMessage = false;
                             foreach ($words as $word) {
                                 foreach ($replaceWord as $invalidWord => $validWord) {
-                                    if( preg_match('/invalid/', $word) ) {
+                                    if( preg_match($invalidWord, $word) ) {
                                         $illegalWords[$i] = $word;
                                         $i++;
                                         $isIllegalMessage = true;
