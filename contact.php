@@ -14,7 +14,20 @@
             <section id="pageContent">
                 <article id="content">
                     <?php 
+                        $query = "SELECT * FROM illegals";           
+                        if ( !( $database = mysql_connect( "localhost", "psw1", "psw1" ) ) )
+                           die( "<p>Nie moge polaczyc sie z baza</p></body></html>" );
+
                         
+                        if ( !mysql_select_db( "psw", $database ) )
+                           die( "<p>Nie moge otworzyc bazy</p></body></html>" );
+                        
+                        if ( !( $result = mysql_query( $query, $database ) ) )
+                        {
+                           print( "<p>Nie moge wykonac zapytania!</p>" );
+                           die( mysql_error() . "</body></html>" );
+                        } 
+
                         session_start();
                         if( !isset($_SESSION['ta']) ) {
                             $_SESSION['ta'] = array();
@@ -74,6 +87,7 @@
 
                         function showMessage() {
                             echo $_COOKIE['textarea'];
+                            #setcookie('textarea', 'value', time()*3600);
                         }
                     ?>
                 </article>
