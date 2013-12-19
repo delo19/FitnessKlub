@@ -14,19 +14,7 @@
             <section id="pageContent">
                 <article id="content">
                     <?php 
-                        $query = "SELECT * FROM illegals";           
-                        if ( !( $database = mysql_connect( "localhost", "psw1", "psw1" ) ) )
-                           die( "<p>Nie moge polaczyc sie z baza</p></body></html>" );
-
                         
-                        if ( !mysql_select_db( "psw", $database ) )
-                           die( "<p>Nie moge otworzyc bazy</p></body></html>" );
-                        
-                        if ( !( $result = mysql_query( $query, $database ) ) )
-                        {
-                           print( "<p>Nie moge wykonac zapytania!</p>" );
-                           die( mysql_error() . "</body></html>" );
-                        } 
 
                         session_start();
                         if( !isset($_SESSION['ta']) ) {
@@ -60,6 +48,12 @@
                     </ul>
                     <?php
                         function checkWords() {
+                            $sql = "UPDATE counter SET `value`=`value`+1 WHERE `key`='$word';";
+                            if ( !( $database = mysql_connect( "localhost", "psw1", "psw1" ) ) )
+                                die( "<p>Nie moge polaczyc sie z baza</p></body></html>" );
+                            if ( !mysql_select_db( "psw", $database ) )
+                               die( "<p>Nie moge otworzyc bazy</p></body></html>" );
+                             
                             $replaceWord = ["/invalid/" => "valid",];
                             $words = explode(' ', $_POST['ta']);
                             $i = 0;
@@ -69,6 +63,11 @@
                                 foreach ($replaceWord as $invalidWord => $validWord) {
                                     if( preg_match($invalidWord, $word) ) {
                                         $illegalWords[$i] = $word;
+                                        if ( !( $result = mysql_query( $sql, $database ) ) )
+                                        {
+                                           print( "<p>Nie moge wykonac zapytania!</p>" );
+                                           die( mysql_error() . "</body></html>" );
+                                        }
                                         $i++;
                                         $isIllegalMessage = true;
                                         $message = $message . " " . $validWord;
@@ -82,6 +81,7 @@
                             } else {
                                 $_COOKIE['textarea'] = "";
                             }
+                            mysql_close( $database );
                             return $illegalWords;
                         }
 
