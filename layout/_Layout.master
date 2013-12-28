@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" %>
+
+
+<html>
+<head>
+    <!--Meta region-->
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Author" content="Autor: Mateusz Sulima/Michał Semla Wydział Informatyki i Zarządzania PWr" />
+    <meta name="Keywords" content="fitness, klub, sport, gimnastyka" />
+    <meta name="robots" content="noindex,nofollow" />
+
+    <!--Link region-->
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+    <link href="css/leftNav.css" rel="stylesheet" />
+    <link href="css/rightNav.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+
+    <link href="css/css1.css" rel="stylesheet" />
+    <!--Import na potrzeby  1 zajeć z cssa-->
+
+    <link href="css/css2.css" rel="stylesheet" />
+    <!--Import na potrzeby  2 zajeć z cssa-->
+
+</head>
+<body>
+
+    <header id="header">
+        <div id="logo">
+            Logo here
+        </div>
+        <div id="CompanyTitle">
+            <h3>FitnessKlub</h3>
+        </div>
+    </header>
+    <nav>
+        <a href="/">Główna</a>
+        <a href="/news.html"><span>Aktualnosci</span></a>
+        <a href="/o-nas.html"><span>O nas</span></a>
+        <a href="/gallery.html"><span>Galeria</span></a>
+
+        <a href="/contact.php"><span>Kontakt</span></a>
+    </nav>
+    <aside id="leftNav">
+        Oferta:
+    <a href="/index.html">Index</a>
+        <a href="/prices.html"><span>Cennik</span></a>
+        <a href="/news.html"><span>Plany zajęć</span></a>
+        <a href="/terms.html"><span>Regulamin</span></a>
+        <a href="/form.html"><span>Form</span></a>
+        <a href="/register.php"><span>Register</span></a>
+        <details>
+            <summary>Info</summary>
+            <p>Zapraszamy do kontaktu pod numerem: 123 123 123</p>
+        </details>
+    </aside>
+
+    <aside id="rightNav">
+        <img id="image" src="/img/oblicz.png" alt="Oblicz BMI" width="200" unselectable="on"
+            style="position: absolute; user-select: none; -moz-user-select: none; -webkit-user-select: none;">
+    </aside>
+
+    <div id="page">
+        <div id="pageContent">
+            <asp:ContentPlaceHolder ID="contentID" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footerDiv">
+            <div id="footermenu">
+                <h4>Menu</h4>
+                <ul>
+                </ul>
+            </div>
+            <div id="footershare">
+                <h4>Znajdź nas</h4>
+                <ul>
+                    <li>
+                        <a href="http://facebook.com">
+                            <img src="http://static.viewbook.com/images/social_icons/facebook_32.png" alt="Facebook">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="http://static.viewbook.com/images/social_icons/linkedin_32.png" alt="LinkedIn">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="http://static.viewbook.com/images/social_icons/twitter_32.png" alt="Twitter">Twitter</a></li>
+
+                </ul>
+
+            </div>
+            <div id="footercontact">
+                <h4>Kontakt</h4>
+                <br>
+                Email Mateusz: <a href="mailto:mateusz.sulima0@gmail.com">mateusz.sulima0@gmail.com</a>
+                <br>
+                Email Michał: <a href="mailto:">michal.semla0@brakdomany</a>
+            </div>
+            <div id="footer-end">
+                Copyright © 2013 Mateusz Sulima & Michał Semla | Wszelkie prawa zastrzeżone.
+            <details>
+                <summary>Info</summary>
+                <p>Zapraszamy do kontaktu pod numerem: 123 123 123</p>
+            </details>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

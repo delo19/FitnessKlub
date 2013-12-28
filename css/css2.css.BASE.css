@@ -1,0 +1,214 @@
+/*Punkt 3*/
+#zawartosc1 {
+    background-color: rgba(0,255,0,0.4);
+}
+
+#zawartosc2 {
+    /* 
+       
+    background-color: hsla(120,65%,75%,0.3);
+    background-color: hsla(120,92%,86%,0.6);
+    background-color: hsla(120,92%,86%,0.6);
+    background-color: hsla(120,92%,86%,0.6);
+    background-color: hsla(120,92%,86%,0.6);*/
+    background-color: hsla(60,92%,86%,0.6);
+}
+
+/* Punkt 7 */
+
+#borderImageTest {
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    border-image: url("/img/border.png") 30 repeat;
+}
+
+#borderImageTest1 {
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    border-image: url("/img/border.png") 30%;
+}
+
+#borderImageTest2 {
+    border:15px solid transparent;
+    width:250px;
+    padding:10px 20px;
+    border-image: url("/img/border.png") 30% repeat;
+}
+
+/* Punkt 8*/
+
+#transitionTest {
+    width: 30px;
+    height: 30px;
+    background: red;
+    transition: width 2s;
+}
+
+#transitionTest2 {
+    width: 30px;
+    height: 30px;
+    background: green;
+    transition: width 2s;
+}
+
+#transformTest {
+    width: 30px;
+    height: 30px;
+    background: blue;
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+}
+
+#transformTest2 {
+    width: 30px;
+    height: 30px;
+    background: black;
+    transform: translate(20px,20px);
+    -webkit-transform: translate(20px,20px);
+}
+
+#transformTest3 {
+    width: 30px;
+    height: 30px;
+    background: rgba(128,128,128,0.5);
+    transform: translate(20px,10px);
+    -webkit-transform: translate(20px,10px);
+}
+
+#transformTest3a {
+    width: 30px;
+    height: 30px;
+    background: rgba(238,128,38,0.5);
+}
+
+/* Punkt 11 */
+
+.box {
+  width: 350px;
+  height: 95px;
+  border: 1px solid #555;
+  font: 24px Arial;
+
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+
+  display: box;
+  box-orient: horizontal;
+}
+
+.box > div {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+
+  -webkit-transition: width 0.7s ease-out;
+  transition: width 0.7s ease-out;
+}
+
+.box > div:nth-child(1){ background : #F99; }
+.box > div:nth-child(2){ background : #9F9; }
+.box > div:nth-child(3){ background : #99F; }
+
+.box > div:hover { 
+  width: 200px;
+}​
+
+/*Punkt 12*/
+
+
+/* column count */
+.kolumny {
+    column-count: 3;
+    -moz-column-count: 3; /* Firefox */
+    -webkit-column-count: 3; /* Safari and Chrome */
+}
+/* column gape(odleglosci) oraz column rule- co zrobic z przerwami) */
+.kolumny {
+    column-gap: 40px;
+    column-rule: 4px outset #000;
+    /* Firefox */
+    -moz-column-gap: 40px;
+    -moz-column-rule: 4px outset #000;
+    /* Safari and Chrome */
+    -webkit-column-gap: 40px;
+    -webkit-column-rule: 4px outset #000;
+}
+
+
+
+/*Punkt 13*/
+
+@media screen and (min-width: 980px) {
+    /* column count */
+    .kolumny {
+        column-count: 5;
+        -moz-column-count: 5; /* Firefox */
+        -webkit-column-count: 5; /* Safari and Chrome */
+    }
+}
+
+
+
+/*Punkt 11*/
+
+#divDuzy {
+    height: 500px;
+    background-color: gray;
+}
+
+#divMaly {
+    width: 150px;
+    height: 150px;
+    text-align: center; 
+    display: -ms-flexbox; 
+}
+
+
+
+
+
+@font-face {
+  font-family: 'Bigelow Rules';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bigelow Rules'), local('BigelowRules-Regular'), 
+      url(http://themes.googleusercontent.com/static/fonts/bigelowrules/v1/FEJCPLwo07FS-6SK6Al50dUFqmyT-Ih543PWa_C0ig4.woff) format('woff');
+}
+
+body{
+    font-family: Bigelow Rules;
+}
+
+#lool{
+    color: #000;
+   font-family:Bigelow Rules; 
+}
+
+
+
+
+/*Animacja */
+
+
+body
+{
+animation:myfirst 15s;
+-webkit-animation:myfirst 15s; /* Safari and Chrome */
+}
+
+@keyframes myfirst
+{
+0%   {background:red;}
+25%  {background:yellow;}
+50%  {background:blue;}
+100% {background:green;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red;}
+25%  {background:yellow;}
+50%  {background:blue;}
+100% {background:green;}
+}

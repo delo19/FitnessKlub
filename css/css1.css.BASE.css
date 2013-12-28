@@ -1,0 +1,229 @@
+
+body {
+    /* css2: 4*/
+    /*background: linear-gradient(to left, cyan, blue);*/
+    background-image: -webkit-radial-gradient(center center, ellipse closest-corner, #ff0000, #00ff00, #0000ff );
+    /*background-color: #0ff;
+    background-repeat: repeat-x;
+    /*background-image: url("/img/bg.jpg");
+    background-attachment: fixed;*/
+}
+/*
+h1, h2 {
+    font-size: 50%;
+    border-style: dotted;
+    margin: 0.5em;
+}
+
+.greenMove {
+    color: #00ff21;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+*/
+#1content, #2content {
+    float: left;
+    background: #000;
+}
+
+/* 6 */
+
+#borderTest {
+    padding:25px;
+    background-image: url("/img/gallery1.jpg");
+    background-origin: border-box;
+}
+
+#contentTest {
+    padding:25px;
+    background-image: url("/img/gallery1.jpg");
+    background-origin: content-box;
+}
+
+header {
+    background: #064a41;
+}
+
+#logoFirmy {
+    background: black;
+    
+    background-image: url("/img/gallery1.jpg");
+    clear: both;
+    width: 300px;   
+    margin-left: 1030px;
+    height: 200px;
+    margin-bottom: 0px;    
+    position: fixed;
+
+}
+
+#akapit1{
+    width: 20%;
+}
+    
+#akapit2{
+    width: 80%;
+}
+
+#akapit3{
+    overflow-y: scroll; 
+    height: 100px;
+    width: 200px; 
+}
+
+p.cienka {
+    border-width:1px;
+    border-style:solid;
+}
+
+p.pogrubiona {
+    border-width:3px;
+    border-style:solid;
+}
+
+p.podwojna {
+    border-style:double;
+}
+
+p.kropkowana {
+    border-style:dotted;
+}
+
+p.czerwona {
+    border-style:solid;
+    border-color:red;    
+}
+
+p.niebieska {
+    border-style:solid;
+    border-color:blue;    
+}
+
+a#testA{
+    background-color: red;    
+}
+
+/* ------------------------MENU------------------------ */
+
+#testMenu, #testMenu ul, #testMenu ol {
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+
+#testMenu {
+    background-color:#FFF;
+    font-size:18px;
+    height:2em;
+    line-height:2em;
+    text-align:center;
+}
+
+#testMenu a {
+    display:block;
+    text-decoration:none;
+    color:#000;
+    padding:0 5px;
+}
+
+#testMenu > li {
+    float:left;
+    width:150px;
+    margin-left:1px;
+    background-color:#00a5fd;
+    height:2em;
+}
+
+#testMenu > li:first-child {
+    margin-left:0;
+}
+
+#testMenu > li:hover {
+    background-color:#EEE;
+}
+
+#testMenu > li:hover > a {
+    color:#09C;
+}
+
+#testMenu > li:hover > ul {
+    display:block;
+}
+
+/* ------------------------MENU-POZIOM-1----------------------- */
+
+#testMenu > li > ul {
+    display:none;
+}
+
+#testMenu > li > ul > li {
+    position:relative;
+    background-color:#EEE;
+}
+
+#testMenu > li > ul > li > a {
+    border-top:1px solid #FFF;
+}
+
+#testMenu > li > ul > li:hover {
+    background-color:#DDD;
+}
+
+#testMenu > li > ul > li:hover > a {
+    color:#09C;
+}
+
+/* ------------------------MENU-POZIOM-2----------------------- */
+
+#testMenu > li > ul > li > ol {
+    display:none;
+    width:150%;
+    position:absolute;
+    left:100%;
+    margin-top:-2em;
+}
+
+#testMenu > li > ul > li:hover > ol {
+    display:block;
+}
+
+#testMenu > li > ul > li > ol > li {
+    background-color:#CCC;
+}
+
+#testMenu > li > ul > li > ol > li > a {
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+
+#testMenu > li > ul > li > ol > li > a:hover {
+    color:#09C;
+}
+
+/* ------------------------MENU-POZIOM-3----------------------- */
+
+#testMenu > li > ul > li > ol > li > ol {
+    display:none;
+    width:150%;
+    position:absolute;
+    left:100%;
+    margin-top:-2em;
+    text-shadow: 0.1em 0.1em #333;
+}
+
+#testMenu > li > ul > li > ol > li:hover > ol {
+    display:block;
+}
+
+#testMenu > li > ul > li > ol > li > ol > li {
+    background-color:#CCC;
+}
+
+#testMenu > li > ul > li > ol > li > ol > li > a {
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+
+#testMenu > li > ul > li > ol > li > ol > li > a:hover {
+    color:#09C;
+}
