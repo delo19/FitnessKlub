@@ -9,22 +9,28 @@
     <meta name="Author" content="Autor: Mateusz Sulima/Michał Semla Wydział Informatyki i Zarządzania PWr" />
     <meta name="Keywords" content="fitness, klub, sport, gimnastyka" />
     <meta name="robots" content="noindex,nofollow" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <!--JQUERY-->
+    <script type="text/javascript" src="../js/include.js"></script>
+    <!--Include fragments-->
+    <script type="text/javascript" src="../js/customScripts.js"></script>
+    <!--Email sender-->
 
     <!--Link region-->
-    <link href="css/common.css" rel="stylesheet" />
-    <link href="css/footer.css" rel="stylesheet" />
-    <link href="css/menu.css" rel="stylesheet" />
-    <link href="css/nav.css" rel="stylesheet" />
-    <link href="css/leftNav.css" rel="stylesheet" />
-    <link href="css/rightNav.css" rel="stylesheet" />
-    <link href="css/header.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
+    <link href="../css/menu.css" rel="stylesheet" />
+    <link href="../css/nav.css" rel="stylesheet" />
+    <link href="../css/leftNav.css" rel="stylesheet" />
+    <link href="../css/rightNav.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
 
-    <link href="css/css1.css" rel="stylesheet" />
+    <link href="../css/css1.css" rel="stylesheet" />
     <!--Import na potrzeby  1 zajeć z cssa-->
 
-    <link href="css/css2.css" rel="stylesheet" />
+    <link href="../css/css2.css" rel="stylesheet" />
     <!--Import na potrzeby  2 zajeć z cssa-->
-
+    <title>Tytul</title>
 </head>
 <body>
 

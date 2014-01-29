@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <!--Script region-->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script><!--JQUERY-->
+        <script type="text/javascript" src="js/include.js"></script><!--Include fragments-->
+        <script type="text/javascript" src="js/customScripts.js"></script><!--Email sender-->
+        <script type="text/javascript" src="js/dom.js"></script><!--Email sender-->
+        <link href="css/contact.css" rel="stylesheet" />
+        <title>Contact</title>
+
+
+
+    </head>
+    <body>
+
+        <!--
+        Here we have all page content downloaded using include.js
+        You can add page content using section "content"
+        -->
+        <div id="page">
+            <section id="pageContent">
+                <article id="content">
+                    <form onsubmit="submitAlert()" onreset="resetAlert()">
+                        <p>Subskrybcja mailowa <input type="checkbox" name="nazwa" value="subscription" /></p>
+                        <p>Pleć: K<input type="radio" name="sex" value="male" /> M<input type="radio" name="sex" value="female" /></p>
+                        <p>Imie: <input type="text" name="Name" /></p>
+                        <p>Telefon <input type="text" name="Phone" /></p>
+                        <p>Wybierz: <select name="">
+                            <option>Opcja 1</option>
+                            <option>Opcja 2</option>
+                            <option>Opcja 3</option>
+                        </select></p>
+                        <p><textarea rows="4" maxlength="200" onfocus="getFocus()" onblur="getBlur()">Wpisz co ci lezy na sercu(Maksymalnie 200 znakow).
+                        </textarea></p>
+                        <button type="reset">Wyczyść</button>
+                        <button type="submit" >Wyślij</button>
+                        <p><a id="download" href="files/download.me">DownloadUtility</a></p>
+                        <input type="button" onclick="getFocus()" value="Uzycie focus">
+                        <input type="button" onclick="getBlur()" value="Uzycie blur">
+                        <p>Licznik obrazkow: <script type="text/javascript">document.write(document.images.length);</script></p>
+                        <p>Licznik linkow: <script type="text/javascript">document.write(document.links.length);</script></p>
+                        <p>Licznik form: <script type="text/javascript">document.write(document.forms.length);</script></p>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

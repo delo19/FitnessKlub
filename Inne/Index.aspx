@@ -1,4 +1,4 @@
-﻿<%@ Page MasterPageFile="layout/_Layout.master" %>
+﻿<%@ Page MasterPageFile="~/layout/_Layout.master" %>
 
 <asp:Content ContentPlaceHolderID="contentID" runat="server">
     <h2>Individual Content</h2>
