@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="pswModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="odzywki">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="varchar" MaxLength="255" />
+          <Property Name="Opis" Type="varchar" MaxLength="255" />
+          <Property Name="Cena" Type="double" />
+          <Property Name="Typ" Type="int" />
+        </EntityType>
+        <EntityType Name="urzadzenia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="varchar" MaxLength="255" />
+          <Property Name="Opis" Type="varchar" MaxLength="255" />
+          <Property Name="Cena" Type="double" />
+        </EntityType>
+        <EntityType Name="uzytkownicy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="255" />
+          <Property Name="Haslo" Type="varchar" MaxLength="255" />
+          <Property Name="Cena" Type="double" />
+        </EntityType>
+        <EntityType Name="zamowienia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUzytkownika" Type="uint" Nullable="false" />
+          <Property Name="idOdzywki" Type="uint" Nullable="false" />
+        </EntityType>
+        <Association Name="Odzywka">
+          <End Role="odzywki" Type="Self.odzywki" Multiplicity="1" />
+          <End Role="zamowienia" Type="Self.zamowienia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="odzywki">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="zamowienia">
+              <PropertyRef Name="idOdzywki" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Uzytkownik">
+          <End Role="uzytkownicy" Type="Self.uzytkownicy" Multiplicity="1" />
+          <End Role="zamowienia" Type="Self.zamowienia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="uzytkownicy">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="zamowienia">
+              <PropertyRef Name="idUzytkownika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="pswModelStoreContainer">
+          <EntitySet Name="odzywki" EntityType="Self.odzywki" Schema="psw" store:Type="Tables" />
+          <EntitySet Name="urzadzenia" EntityType="Self.urzadzenia" Schema="psw" store:Type="Tables" />
+          <EntitySet Name="uzytkownicy" EntityType="Self.uzytkownicy" Schema="psw" store:Type="Tables" />
+          <EntitySet Name="zamowienia" EntityType="Self.zamowienia" Schema="psw" store:Type="Tables" />
+          <AssociationSet Name="Odzywka" Association="Self.Odzywka">
+            <End Role="odzywki" EntitySet="odzywki" />
+            <End Role="zamowienia" EntitySet="zamowienia" />
+          </AssociationSet>
+          <AssociationSet Name="Uzytkownik" Association="Self.Uzytkownik">
+            <End Role="uzytkownicy" EntitySet="uzytkownicy" />
+            <End Role="zamowienia" EntitySet="zamowienia" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pswModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="odzywki">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Cena" Type="Double" />
+          <Property Name="Typ" Type="Int32" />
+          <NavigationProperty Name="zamowienia" Relationship="Self.Odzywka" FromRole="odzywki" ToRole="zamowienia" />
+        </EntityType>
+        <EntityType Name="urzadzenia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Cena" Type="Double" />
+        </EntityType>
+        <EntityType Name="uzytkownicy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cena" Type="Double" />
+          <NavigationProperty Name="zamowienia" Relationship="Self.Uzytkownik" FromRole="uzytkownicy" ToRole="zamowienia" />
+          <Property Name="Login" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Haslo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="zamowienia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUzytkownika" Type="Int64" Nullable="false" />
+          <Property Name="idOdzywki" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="odzywki" Relationship="Self.Odzywka" FromRole="zamowienia" ToRole="odzywki" />
+          <NavigationProperty Name="uzytkownicy" Relationship="Self.Uzytkownik" FromRole="zamowienia" ToRole="uzytkownicy" />
+        </EntityType>
+        <Association Name="Odzywka">
+          <End Role="odzywki" Type="Self.odzywki" Multiplicity="1" />
+          <End Role="zamowienia" Type="Self.zamowienia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="odzywki">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="zamowienia">
+              <PropertyRef Name="idOdzywki" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Uzytkownik">
+          <End Role="uzytkownicy" Type="Self.uzytkownicy" Multiplicity="1" />
+          <End Role="zamowienia" Type="Self.zamowienia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="uzytkownicy">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="zamowienia">
+              <PropertyRef Name="idUzytkownika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="pswEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="odzywki" EntityType="Self.odzywki" />
+          <EntitySet Name="urzadzenia" EntityType="Self.urzadzenia" />
+          <EntitySet Name="uzytkownicy" EntityType="Self.uzytkownicy" />
+          <EntitySet Name="zamowienia" EntityType="Self.zamowienia" />
+          <AssociationSet Name="Odzywka" Association="Self.Odzywka">
+            <End Role="odzywki" EntitySet="odzywki" />
+            <End Role="zamowienia" EntitySet="zamowienia" />
+          </AssociationSet>
+          <AssociationSet Name="Uzytkownik" Association="Self.Uzytkownik">
+            <End Role="uzytkownicy" EntitySet="uzytkownicy" />
+            <End Role="zamowienia" EntitySet="zamowienia" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pswModelStoreContainer" CdmEntityContainer="pswEntities">
+          <EntitySetMapping Name="odzywki">
+            <EntityTypeMapping TypeName="pswModel.odzywki">
+              <MappingFragment StoreEntitySet="odzywki">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+                <ScalarProperty Name="Cena" ColumnName="Cena" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="urzadzenia">
+            <EntityTypeMapping TypeName="pswModel.urzadzenia">
+              <MappingFragment StoreEntitySet="urzadzenia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+                <ScalarProperty Name="Cena" ColumnName="Cena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="uzytkownicy">
+            <EntityTypeMapping TypeName="pswModel.uzytkownicy">
+              <MappingFragment StoreEntitySet="uzytkownicy">
+                <ScalarProperty Name="Haslo" ColumnName="Haslo" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Cena" ColumnName="Cena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zamowienia">
+            <EntityTypeMapping TypeName="pswModel.zamowienia">
+              <MappingFragment StoreEntitySet="zamowienia">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idUzytkownika" ColumnName="idUzytkownika" />
+                <ScalarProperty Name="idOdzywki" ColumnName="idOdzywki" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
