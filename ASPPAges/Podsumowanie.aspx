@@ -4,7 +4,7 @@
     <article id="content">
         <form runat="server">
             <asp:Label ID="podsumowanie" runat="server" Text="Label"></asp:Label>
-            <asp:Button ID="okBtn" runat="server" Text="ok" />
+            <asp:Button ID="okBtn" runat="server" Text="ok" OnClick="okBtn_Click" />
         </form>
     </article>
 </asp:Content>

@@ -24,6 +24,7 @@ public partial class ASPPAges_ListaProduktow : System.Web.UI.Page
             if (user != null && user.Count > 0)
             {
                 MySession.zalogowanyUser = user.First();
+                Response.Redirect("ListaProduktow.aspx");
             }
             else
             {
